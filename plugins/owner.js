@@ -1,7 +1,7 @@
 let handler = function (m) {
-  this.sendContact(m.chat, '6282252655313', '꧁࿇ ᴍ ᴀꜰᴅʜᴀɴ ࿇꧂', m)
+  this.sendContact(m.chat, '6283129011845', '꧁࿇NezaVpn࿇꧂', m)
 //let pp_owner ='src/Owner.jpg'
-//conn.sendFile(m.chat, pp_owner, 'My Owner.jpg', '*This is my owner ᴍ ᴀꜰᴅʜᴀɴ*\n*Contact: https://wa.me/6282252655313*', m)
+//conn.sendFile(m.chat, pp_owner, 'My Owner.jpg', '*This is my owner Neza Vpn*\n*Contact: https://wa.me/6283129011845*', m)
 }
 
 handler.command = new  RegExp
