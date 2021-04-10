@@ -28,6 +28,9 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'simi':
       chat.simi = isEnable
       break
+    case 'nsfw':
+      chat.nsfw = isEnable
+      break
     case 'alloption':
     case 'option':
       //chat.badWord = isEnable
@@ -46,7 +49,7 @@ ${usedPrefix}off welcome
 `.trim())
   }
   m.reply(`
-*${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* untuk ${isAll ? 'bot ini' : 'chat ini'}
+_Berhasil di *${isEnable ? 'Nyala' : 'Mati'}kan* *${type}* Untuk ${isAll ? 'Bot ini' : 'Chat ini'}
 `.trim())
 }
 
