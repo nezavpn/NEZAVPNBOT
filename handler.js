@@ -49,6 +49,7 @@ module.exports = {
           if (!'antiLink' in chat) chat.antiLink = false
           if (!'badWord' in chat) chat.badWord = false
           if (!'simi' in chat) chat.simi = false
+          if (!'nsfw' in chat) chat.nsfw = false
         } else global.DATABASE._data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -58,6 +59,7 @@ module.exports = {
           antiLink: false,
           badWord: false,
           simi: false,
+          nsfw: false,
         }
       } catch (e) {
         console.log(e, global.DATABASE.data)
@@ -210,7 +212,7 @@ module.exports = {
             }
           } finally {
             // m.reply(util.format(_user)) 
-            if (m.limit) m.reply(':v')
+            if (m.limit) m.reply('Mwehehehe :v')
           }
     			break
   	  	}
@@ -297,9 +299,12 @@ module.exports = {
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (!chat.delete) return
     await this.reply(m.key.remoteJid, `
-*_Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan!_*
+*[ • CHAT ANTI DELETE • ]*
 
-*[ • SGDC-BOT • ] _Detector_*
+_Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan!_
+*SGDC-BOT* akan mengembalikan pesan tersebut.
+
+*[ • SGDC-BOT • ]*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
