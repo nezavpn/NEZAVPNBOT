@@ -18,7 +18,7 @@ global.APIKeys = {
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
-global.rowner = ['6282252655313','6283129011745']
+global.rowner = ['6282252655313','6283129011845']
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
